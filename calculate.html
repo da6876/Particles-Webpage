@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Insert Text Into Div from the Textarea</title>
+<style>
+    .output{
+        padding: 10px;
+        min-height: 50px;
+        margin: 20px 0;
+        background-color: #f1f1f1;
+        border: 1px solid #e4e4e4;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#myTextarea").keyup(function(){
+        // Getting the current value of textarea
+        var currentText = $(this).val();
+        
+        // Setting the Div content
+        $("#result").text((currentText*10)/100);
+    });
+});
+</script>
+</head>
+<body>
+    <form>
+        <input type="number" id="myTextarea" placeholder="Enter The Numer"/>
+        Result : <span id="result"></span>
+    </form>
+</body>
+</html>                            
